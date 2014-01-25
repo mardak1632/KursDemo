@@ -126,10 +126,10 @@ public class GirisForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Kullanıcı adı yanlış");
             return;
         }
-        if(password.equals("5")){
-            JOptionPane.showMessageDialog(this, "Giriş başarılı");
-        } else {
+        if(!password.equals("5")){
             JOptionPane.showMessageDialog(this, "Şifre yanlış");
+        } else {
+            JOptionPane.showMessageDialog(this, "Giriş başarılı");
         }
         MainForm mainForm=new MainForm();
         mainForm.setVisible(true);
