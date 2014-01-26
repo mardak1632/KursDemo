@@ -8,6 +8,7 @@ package com.bilisimegitim.kursdemo.giris;
 
 import com.bilisim.egitim.kursdemo.reg.RegDialog;
 import com.bilisimegitim.kursdemo.main.MainForm;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,6 +22,8 @@ public class GirisForm extends javax.swing.JFrame {
      */
     public GirisForm() {
         initComponents();
+        //this.setLocationRelativeTo(null);
+        setLocationRelativeTo(this);
     }
 
     /**
@@ -131,10 +134,14 @@ public class GirisForm extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Şifre yanlış");
         }
-        MainForm mainForm=new MainForm();
-        mainForm.setVisible(true);
+        new MainForm().setVisible(true);
+        //MainForm mainForm=new MainForm();
+        //mainForm.setVisible(true);
+        
+        //String date=DateUtil.dateToStr(new Date(),"dd/MM/yyyy");
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    //private void girisKontrol 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         RegDialog regDialog=new RegDialog(this, true);
         regDialog.setVisible(true);
